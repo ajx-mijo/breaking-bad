@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+* {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+
 $primary: #1F6032;
 
 .navbar {
@@ -6,6 +13,35 @@ $primary: #1F6032;
   .nav-link {
     color: white;
     cursor: pointer;
+    font-size: 20px;
+  }
+
+}
+
+.basic-navbar-nav {
+  background-color: white;
+}
+
+.lp-title {
+  font-size: 80px;
+  margin-bottom: 70px;
+}
+
+.lp-subtitle {
+  margin-top: 50px;
+}
+
+.search-function {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+
+  #filter {
+    margin-left: 5px;
+    padding-left: 5px;
+    border: 2px solid black;
+    border-radius: 18px;
+    width: 150px;
   }
 }
 
@@ -22,17 +58,18 @@ main {
 
 .landing-page {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url(../images/breaking-bad.gif);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #fbbf49;
+  flex-direction: column;
+
 }
 
-
-
+.hero-text {
+  font-size: 40px;
+  margin-top: 10px;
+}
 
 .char-card {
   .card {
@@ -40,7 +77,6 @@ main {
     border-radius: 18px;
     background-color: black;
     color: white;
-    text-decoration: none;
   }
 
   .card-image {
@@ -60,6 +96,10 @@ main {
     border-radius: 18px;
 
   }
+
+  .status-display {
+    color: red;
+  }
 }
 
 .return-btn {
@@ -74,4 +114,35 @@ footer {
   font-size: 15px;
   color: rgb(116, 116, 116);
   padding-top: 10px;
+
+  p {
+    margin: 0;
+  }
+}
+
+
+.test {
+  height: auto;
+  width: cover;
+  border: 5px solid black;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar {
+    background-color: white;
+
+    .nav-link {
+      color: black;
+    }
+  }
+
+  footer {
+    background-color: white;
+  }
+
+
+  .lp-title {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
 }

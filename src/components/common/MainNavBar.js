@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-
+import Logo from '../../../src/images/heisenberg.png'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -8,13 +8,13 @@ import Container from 'react-bootstrap/Container'
 
 const MainNavBar = () => {
   return (
-    <Navbar>
+    <Navbar expand='sm'>
       <Container>
-        <Navbar.Brand as={Link} to='/'><img
-          src='./BBtransparent.jpg'
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
+        <Navbar.Brand as={Link} to='/' className='intro-navbar'><img
+          src={Logo}
+          width="50"
+          height="50"
+          className="d-inline-block align-center img-nav"
           alt="Logo"
         />
         </Navbar.Brand>

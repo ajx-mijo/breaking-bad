@@ -37,8 +37,10 @@ const CharacterSingle = () => {
     getCharacter()
   }, [charId])
 
-
-
+  // useEffect(() => {
+  //   const occupation = characters.occupation.join(' ')
+  //   console.log('occupation->', occupation)
+  // }, [characters])
 
   return (
     <main className='char-single-page'>
@@ -54,11 +56,11 @@ const CharacterSingle = () => {
                 <img className='single-image' src={characters.img} alt={characters.name} />
               </Col>
               <Col sm='12' md='6'>
-                <h2>{characters.name}</h2><button>Press for quote</button>
+                <h2>{characters.name}</h2><button>I will tell you something...</button>
                 <hr />
                 <h3>Nickname: {characters.nickname}</h3>
                 <hr />
-                <h3>Occupation: {characters.occupation}</h3> <h3>Status: {characters.status}</h3>
+                <h3>Occupation: {characters.occupation}</h3> <h3 className='status-display'>Status {characters.status}</h3>
                 <hr />
                 <h3>Series appeared in: {characters.appearance}</h3>
               </Col>

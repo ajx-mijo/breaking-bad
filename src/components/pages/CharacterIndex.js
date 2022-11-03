@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 
 import Filters from '../common/Filters'
+import Spinner from '../common/Spinner'
 
 const CharacterIndex = () => {
 
@@ -35,24 +36,30 @@ const CharacterIndex = () => {
   return (
     <main className='char-index-page'>
       <Container className='mt-4'>
-        <Filters characters={characters} setFilteredCharacters={setFilteredCharacters} filteredCharacters={filteredCharacters} />
         <Row>
-          {filteredCharacters.map(char => {
-            const { name, char_id, nickname, img } = char
-            return (
-              <Col key={char_id} sm='6' md='3' className='char-card mb-4'>
-                <Link to={`/character/${char_id}`}>
-                  <Card>
-                    <div className='card-image' style={{ backgroundImage: `url(${img})` }}></div>
-                    <Card.Body>
-                      <h4>{name}</h4>
-                      <p>{nickname}</p>
-                    </Card.Body>
-                  </Card>
-                </Link>
-              </Col>
-            )
-          })}
+          {filteredCharacters ?
+            <>
+              <Filters characters={characters} setFilteredCharacters={setFilteredCharacters} filteredCharacters={filteredCharacters} />
+              {filteredCharacters.map(char => {
+                const { name, char_id, nickname, img } = char
+                return (
+                  <Col key={char_id} sm='6' md='3' className='char-card mb-4'>
+                    <Link className='text-decoration-none' to={`/character/${char_id}`}>
+                      <Card>
+                        <div className='card-image' style={{ backgroundImage: `url(${img})` }}></div>
+                        <Card.Body>
+                          <h4>{name}</h4>
+                          <p>{nickname}</p>
+                        </Card.Body>
+                      </Card>
+                    </Link>
+                  </Col>
+                )
+              })}
+            </>
+            :
+            <h2>LoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoading</h2>
+          }
         </Row>
       </Container>
     </main>

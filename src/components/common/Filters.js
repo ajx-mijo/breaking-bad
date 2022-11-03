@@ -39,18 +39,20 @@ const Filters = ({ characters, filteredCharacters, setFilteredCharacters }) => {
 
   return (
     <>
-      <input onChange={handleChange} type='text' placeholder="Search here" name='search' value={filterInput.search} />
-      <select onChange={handleChange} name='status' id='filter' value={filterInput.status}>
-        <option value='All'>Dead or Alive</option>
-        <option value='Alive'>Alive</option>
-        <option value='Presumed dead'>Presumed dead</option>
-        <option value='Deceased'>Deceased</option>
-      </select>
-      <select onChange={handleChange} name='category' id='filter' value={filterInput.category}>
-        <option value='All'>All</option>
-        <option value='Breaking Bad'>Breaking Bad</option>
-        <option value='Better Call Saul'>Better Call Saul</option>
-      </select>
+      <div className='search-function'>
+        <input onChange={handleChange} type='text' placeholder="Search name here" name='search' id='filter' value={filterInput.search} />
+        <select onChange={handleChange} name='status' id='filter' value={filterInput.status}>
+          <option value='All'>Dead or Alive</option>
+          <option value='Alive'>Alive</option>
+          <option value='Presumed dead'>Presumed dead</option>
+          <option value='Deceased'>Deceased</option>
+        </select>
+        <select onChange={handleChange} name='category' id='filter' value={filterInput.category}>
+          <option value='All'>Series</option>
+          <option value='Breaking Bad'>Breaking Bad</option>
+          <option value='Better Call Saul'>Better Call Saul</option>
+        </select>
+      </div>
     </>
   )
 }
