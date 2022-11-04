@@ -7,4 +7,4 @@ space out and put commas in the character page (appearances and occupation text)
 
 fix loading/spinner when loading API
 
-implement quote button
+implement quote button 

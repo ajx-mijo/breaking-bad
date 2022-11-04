@@ -94,11 +94,24 @@ main {
     width: 500px;
     border: 5px solid black;
     border-radius: 18px;
-
   }
 
-  .status-display {
+  .single-row {
+    margin: 50px 0px;
+  }
+
+  .char-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .death-display {
     color: red;
+  }
+
+  .alive-display {
+    color: rgb(26, 211, 26);
   }
 }
 
