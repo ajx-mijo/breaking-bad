@@ -1,11 +1,13 @@
-
-
+import LoadImage from '../../../src/images/bbwalter.gif'
 
 const Spinner = () => {
 
 
   return (
-    <h1>Spinner</h1>
+    <>
+      <h1 className='spinner'>Cooking...</h1>
+      <img src={LoadImage} alt='Spinner' className='spinner' />
+    </>
   )
 }
 

@@ -24,9 +24,9 @@ const CharacterIndex = () => {
         const { data } = await axios.get('https://breakingbadapi.com/api/characters')
         setCharacters(data)
         setFilteredCharacters(data)
-        console.log()
       } catch (err) {
         console.log(err.message)
+        setErrors(true)
       }
     }
     getData()
@@ -35,32 +35,30 @@ const CharacterIndex = () => {
 
   return (
     <main className='char-index-page'>
-      <Container className='mt-4'>
-        <Row>
-          {filteredCharacters ?
-            <>
-              <Filters characters={characters} setFilteredCharacters={setFilteredCharacters} filteredCharacters={filteredCharacters} />
-              {filteredCharacters.map(char => {
-                const { name, char_id, nickname, img } = char
-                return (
-                  <Col key={char_id} sm='6' md='3' className='char-card mb-4'>
-                    <Link className='text-decoration-none' to={`/character/${char_id}`}>
-                      <Card>
-                        <div className='card-image' style={{ backgroundImage: `url(${img})` }}></div>
-                        <Card.Body>
-                          <h4>{name}</h4>
-                          <p>{nickname}</p>
-                        </Card.Body>
-                      </Card>
-                    </Link>
-                  </Col>
-                )
-              })}
-            </>
-            :
-            <h2>LoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoading</h2>
-          }
-        </Row>
+      <Container className='char-container mt-4'>
+        <Filters characters={characters} setFilteredCharacters={setFilteredCharacters} filteredCharacters={filteredCharacters} />
+        {filteredCharacters.length ?
+          <Row>
+            {filteredCharacters.map(char => {
+              const { name, char_id, nickname, img } = char
+              return (
+                <Col key={char_id} sm='6' md='3' className='char-card mb-4'>
+                  <Link className='text-decoration-none' to={`/character/${char_id}`}>
+                    <Card>
+                      <div className='card-image' style={{ backgroundImage: `url(${img})` }}></div>
+                      <Card.Body>
+                        <h4>{name}</h4>
+                        <p>{nickname}</p>
+                      </Card.Body>
+                    </Card>
+                  </Link>
+                </Col>
+              )
+            })}
+          </Row>
+          :
+          errors ? <h2>Something is wrong, please try again later...</h2> : <Spinner />
+        }
       </Container>
     </main>
   )

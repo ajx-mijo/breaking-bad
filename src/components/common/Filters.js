@@ -35,8 +35,6 @@ const Filters = ({ characters, filteredCharacters, setFilteredCharacters }) => {
     setFilterInput({ ...filterInput, [e.target.name]: e.target.value })
   }
 
-
-
   return (
     <>
       <div className='search-function'>

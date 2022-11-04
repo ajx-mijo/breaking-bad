@@ -6,6 +6,7 @@
 
 
 $primary: #1F6032;
+$secondary: #0D3E10;
 
 .navbar {
   background-color: black;
@@ -25,6 +26,7 @@ $primary: #1F6032;
 .lp-title {
   font-size: 80px;
   margin-bottom: 70px;
+  text-shadow: 3px 3px 0 rgb(106, 106, 106);
 }
 
 .lp-subtitle {
@@ -35,6 +37,7 @@ $primary: #1F6032;
   display: flex;
   justify-content: center;
   margin: 20px;
+  position: relative;
 
   #filter {
     margin-left: 5px;
@@ -63,12 +66,40 @@ main {
   text-align: center;
   background-color: #fbbf49;
   flex-direction: column;
-
 }
 
 .hero-text {
   font-size: 40px;
   margin-top: 10px;
+  text-shadow: 2px 2px 0 rgb(255, 255, 255);
+}
+
+.char-index-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 5px 5px 0 black;
+  margin-bottom: 100px;
+  margin-top: 90px;
+  font-size: 100px;
+}
+
+.spinner-2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 100px;
+  margin-top: 90px;
+  text-shadow: 5px 5px 0 black;
 }
 
 .char-card {

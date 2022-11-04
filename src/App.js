@@ -1,7 +1,4 @@
-
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 
 import MainFooter from './components/common/MainFooter'
 import MainNavBar from './components/common/MainNavBar'

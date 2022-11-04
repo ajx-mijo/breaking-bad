@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
-
 import Logo from '../../../src/images/heisenberg.png'
-
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
