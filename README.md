@@ -5,7 +5,7 @@
 fixing-good is a pair project that I undertook with a classmate during my studies at General Assembly. The focus of the project was using the React JS framework to create a React application which consumed a public API that would allow users to discover more about the television series Breaking Bad.
 
 
-## Deployment link - [Fixing-Good](https://fixing-good.netlify.app/)
+## Deployment Link - [Fixing-Good](https://fixing-good.netlify.app/)
 
 
 
