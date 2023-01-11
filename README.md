@@ -9,14 +9,7 @@ fixing-good is a pair project that I undertook with a classmate during my studie
 
 
 
-
-
-
-
-
-
-
-
+! [Project Screenshot](https://res.cloudinary.com/doqbnr4p6/image/upload/v1673452522/readMe2/image4_bmdq7p.png)
 
 
 
@@ -46,6 +39,8 @@ The brief set out by the instructional team was to build out a React Application
 
 To plan the project, Alex and I initially drew out a rough list of the main functionalities and the target interface design that we preferred. We then sketched a wireframe using Excalidraw and planned the general division of labor and best-working practices that we would follow during the project. As this was a hackathon, we pair-coded using Visual Studio Code Live Share.
 
+! [Code Screenshot - App.js](https://res.cloudinary.com/doqbnr4p6/image/upload/v1673452522/readMe2/image3_ppax65.png)
+
 We finally discuss a few stretch objectives of the basic requirements of our application as well as more specific design themes and the utilization of React-Bootstrap Cards and NavBar to form the structure of our pages.
 
 The day-to-day planning was established in a predetermined but flexible manner which continually reviewed as we met our project objectives.
@@ -58,10 +53,12 @@ Following this, we split off to work independently on the index page and single-
 
 The next challenge was the dynamic implementation of our Search bar, and drop-down menus. We tackled this challenge together as we knew it would be one of the trickier aspects of the project and we managed to create a fully functional Search Bar that responded to the selected filters applied by the drop-down menus. 
 
+! [Code Screenshot - Searcg/Filter Function](https://res.cloudinary.com/doqbnr4p6/image/upload/v1673452522/readMe2/image5_sjaxzy.png)
+
 After hitting our MVP, we split off to pursue our stretch targets and flesh out the styling. I managed to create a responsive element on the single-display page which retrieved character information from several endpoints after user interaction which was only an interactive feature within the character bio when there was relevant information pertaining to them within the secondary or tertiary endpoint. ‘Rubber-ducking’ this issue with Alex was very helpful to successfully implementing the function. Alex and I then manipulated some of the API data to make it display correctly on our application before applying final styling.
 
 
-
+! [Code Screenshot - Axios API request](https://res.cloudinary.com/doqbnr4p6/image/upload/v1673452522/readMe2/image1_af5ct9.png)
 
 
 ## Challenges
